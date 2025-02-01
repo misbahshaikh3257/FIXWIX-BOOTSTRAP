@@ -1,0 +1,426 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+/* ---------------------whatsapp--------------------- */
+.whatsapp_main {
+    margin-top: 15%;
+    margin-left: 20px;
+    position: fixed;
+    display: inline-block;
+    z-index: 1;
+  }
+  
+  .whatsapp_main .whatsapp_icon {
+    width: 80px;
+    height: 75px;
+    border-radius: 50%;
+    overflow: hidden;
+
+  
+  }
+  
+  .chat {
+    
+    position: absolute;
+    top: 50%;
+    left: 130px; 
+    transform: translate(-50%, -50%); 
+    height: 45px;
+    width: 120px;
+    text-align: center;
+    padding: 7px;
+    font-weight: 700;
+    background-color: #dcf8c6;
+    color: #25d366;
+    display: none; 
+    z-index: -1;
+  }
+  
+  .whatsapp_main:hover .chat {
+    display: block; 
+    animation: fadeIn 0.3s ease; 
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+
+/* -------------------header---------------------- */
+header {
+    height: 45px;
+    background-color: #cee1f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+    position: sticky;   
+}
+
+.header-contact {
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+    color: black;
+    margin: 0 15px;
+    
+   
+}
+
+.header-contact i {
+    font-size: 30px;
+    margin-right: 4px;
+    color: rgb(5, 5, 175);
+ 
+    
+}
+
+.header-contact a {
+    text-transform: lowercase;
+    text-decoration: none;
+    /* margin-left: 5px; */
+    color: black;
+    font-weight: bold;
+}
+
+
+/* ---------------------navbar----------------------- */
+nav{
+    margin-top:0px;
+    height: 60px;
+    background-color:navy
+    /* opacity:0.8 ; */
+   
+    
+}
+@media(max-width:991px){
+    .sidebar{
+        background-color:#8b8c8d;
+       
+    }
+  
+}
+.offcanvas-body{
+    font-size: 20px;
+    font-weight: 600;  
+}
+.navbar-nav .nav-item .nav-link {
+    color: white; /* Set the text color to white */
+    margin: 20px;
+    margin-right: 0px;
+  }
+
+  /* ----------------image------------ */
+#swiper{
+    width: 100%;
+   background-color: #77777700;
+   opacity: 0.9;
+
+}
+
+.swiper{
+    width: 100%;
+    height: 570px;
+
+}
+.swiper .swiper-button-prev ,.swiper .swiper-button-next{
+   color: #fff;
+} 
+
+.swiper .swiper-pagination-bullet-active{
+    background: white;
+}
+
+
+/* -----------------slide content----------------- */
+.swiper-slide {
+    text-align: center;
+}
+
+.slide-content {
+    position: absolute;
+    top: 45%;
+    left: 30%;
+    color: #fff;
+    width: 300px; /* Adjust the width as needed */
+    /* text-align: center; */
+    z-index: 2;
+    transform: translate(-50%, -50%);
+ 
+}
+
+.slide-content h6 {
+    font-size: 40px;
+    margin-bottom: 10px;
+    color: black;
+    white-space: nowrap;
+    font-weight: 500;
+ 
+ 
+}
+
+.slide-content p {
+    font-size: 24px;
+    line-height: 1.4;
+    color:black;
+    white-space: nowrap;
+    font-weight: 500;
+
+
+}
+.animate-fade-in{
+    opacity: 0;
+    animation: fade-in 5s ease-in-out 1s infinite;
+}
+
+@keyframes fade-in{
+    0% {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+#section{
+    width: 100%;
+    height: 650px;
+    /* background-color: rgb(211, 211, 237); */
+    background-image: linear-gradient(rgba(72, 166, 243, 0.5),rgba(64, 58, 183, 0.8)),url('Counter1.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    opacity: 0.9;
+    
+}
+
+#section h1.section-head{
+    color: rgb(34, 32, 32);
+    margin-top: 70px;
+
+}
+
+.icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: -8px;
+    position: relative;
+}
+
+.icon::before {
+    content: "";
+    position: absolute;
+    bottom: 100%; /* Place triangle above the border */
+    left: 50%;
+    transform: translateX(-50%);
+    border-style: solid;
+    border-width: 0 10px 10px;
+    border-color: transparent transparent navy transparent;
+}
+
+.icon::after {
+    content: "";
+    position: absolute;
+    top: 100%; /* Attach the border to the triangle */
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: navy; /* Adjust the color of the border as needed */
+}
+
+#counter{
+    margin-top:120px;
+}
+
+.counter-box img{
+    font-size: 40px; /* Adjust the font size as needed */
+    display: block;
+    margin: 0 auto;
+    color:rgb(20, 20, 115);
+    font-weight: 700;
+}
+
+
+/* Center the text in the counter box */
+.counter-box h2,
+.counter-box h4 {
+    text-align: center;
+}
+
+/* Add some spacing around the counter box */
+.counter-box {
+    text-align: center;
+    width: 100%;
+    height: 90%;
+    background: #f9f9f9;
+    /* top: 80px; */
+    padding: 20px 0;
+    border-radius: 5px;
+    box-shadow: 0 0 20px -4px #66676c;
+}
+ 
+
+@media (max-width: 768px) {
+   .section{
+    background-image: none;
+    background-image: linear-gradient(rgba(72, 166, 243, 0.5),rgba(64, 58, 183, 0.8)),url('Counter.jpg');
+    margin-bottom: 0;
+
+   }
+   .setction .row{
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+   }
+}
+@media (max-width: 768px) {
+    .counter-box img {
+        max-width: 100%; /* Make images full width on mobile */
+        margin: 0 auto;
+    }
+
+    .counter-box h4 {
+        font-size: 16px; /* Adjust font size for mobile */
+    }
+
+    .counter-box{
+        margin-bottom: 20px;
+    }
+}
+
+#about_us{
+    width: 100%;
+    background-color: #f2f7fb;
+}
+
+#about_us .card-img-top{
+    height: 230px;
+}
+
+#about_us .card-body{
+    /* overflow-x:hidden ; */
+    height: 320px;
+    display: inline-block;
+    vertical-align: baseline;
+    font-size: 16px;
+    font-weight: 450;
+}
+
+.card{
+    display: inline-block;
+    vertical-align: top;
+}
+
+
+#contactInfoIcon i{
+    margin-right: 8px;
+}
+
+.choose{
+    background-color: #f2f7fb;
+    margin-top: 150px;
+ 
+}
+.choose .custom-card{
+    height: 200px;
+    display: inline-block;
+    vertical-align: baseline;
+    font-size: 16px;
+    font-weight: 450;
+    
+  }
+  
+  .choose .custom-card p{
+    vertical-align: top;
+    font-size: 18px;
+    font-family: sans-serif;
+  }
+
+/* Making contact & nav sticky */
+
+.fixed-nav{
+    position: sticky;
+    top:0;
+    z-index: 100;
+}
+
+.navbar-toggler{
+    background-color: blanchedalmond;
+}
+
+
+/* <!-- -------Branded Companies-------------- --> */
+.brand{
+    /* margin-top: 100px; */
+    /* height: ; */
+}
+.brand .container-fluid{
+    /* background-color: #e2eff8; */
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+  }
+  
+  
+  .brand .container-fluid img{
+    height: 120px;
+    width: 100%;
+  }
+  
+  .safety{
+    background-color: black;
+    color: white;
+    
+  }
+  
+  .safety img{
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    margin-top: 20px;
+  }
+  
+  .safety p{
+    font-weight: 600;
+    margin-top: 20px;
+    margin-bottom: 100px;
+  }
+
+
+  .safety h2{
+    margin-top: 80px;
+  }
+  .safety .icon::before {
+    content: "";
+    position: absolute;
+    bottom: 100%; /* Place triangle above the border */
+    left: 50%;
+    transform: translateX(-50%);
+    border-style: solid;
+    border-width: 0 10px 10px;
+    border-color: transparent transparent white transparent;
+}
+
+.safety .icon::after {
+    content: "";
+    position: absolute;
+    top: 100%; /* Attach the border to the triangle */
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: white; /* Adjust the color of the border as needed */
+}
+  
+#pricing{
+    height: 40px;
+    background-color: #25d366;
+}
+
